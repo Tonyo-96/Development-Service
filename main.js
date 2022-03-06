@@ -5,8 +5,8 @@ $(document).ready(function () {
   });
 
   $(window).on("load scroll", function () {
-    $(".fa-bars").toggleClass("fa-times");
-    $(".navbar").toggleClass("nav-toggle");
+    $(".fa-bars").removeClass("fa-times");
+    $(".navbar").removeClass("nav-toggle");
 
     if ($(window).scrollTop() > 30) {
       $(".header").css({
@@ -16,12 +16,12 @@ $(document).ready(function () {
     } else {
       $(".header").css({ background: "none", "box-shadow": "none" });
     }
+  });
 
-    $(".accordion-header").click(function () {
-      $(".accordion .accordion-body").slideUp();
-      $(this).next(".accordion-body").slideDown();
-      $(".accordion .accordion-header span").text("+");
-      $(this).children("span").text("-");
-    });
+  $(".accordion-header").click(function () {
+    $(".accordion .accordion-body").slideUp();
+    $(this).next(".accordion-body").slideDown();
+    $(".accordion .accordion-header span").text("+");
+    $(this).children("span").text("-");
   });
 });
