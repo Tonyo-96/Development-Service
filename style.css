@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap");
 
 :root {
   --color: #6c5ce7;
 }
 
 * {
-  font-family: "poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -156,7 +156,7 @@ body {
   margin-top: 1rem;
   font-size: 2rem;
   font-weight: 400;
-  box-shadow: 0 0.3rem, 5rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
 }
 
 .home button:hover {
@@ -169,7 +169,7 @@ body {
   left: 0;
   height: 11rem;
   width: 100%;
-  background: url(/wave.png);
+  background: url(wave.png);
   background-size: 100rem 11rem;
   background-repeat: repeat-x;
   animation: waves 10s linear infinite;
@@ -189,9 +189,8 @@ body {
   0% {
     background-position-x: 0;
   }
-
   100% {
-    background-position-x: 100%;
+    background-position-x: 100rem;
   }
 }
 
@@ -211,7 +210,7 @@ body {
 .home .nut2 {
   bottom: 23%;
   right: -13rem;
-  animation-duration: reverse;
+  animation-direction: reverse;
 }
 
 @keyframes rotate {
@@ -357,7 +356,7 @@ body {
   width: 13rem;
   border-radius: 50%;
   border: 0.5rem solid #fff;
-  box-shadow: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
   object-fit: cover;
 }
 
@@ -416,7 +415,7 @@ body {
   justify-content: center;
 }
 
-.image img {
+.contact .row .image img {
   height: 70vh;
   width: 50vw;
 }
@@ -450,7 +449,7 @@ textarea {
   width: 49%;
 }
 
-.contact .row .form-container .inputBox input[type="email"] {
+.contact .row .form-container input[type="email"] {
   width: 100%;
 }
 
@@ -521,6 +520,7 @@ textarea {
   color: #fff;
   font-weight: 400;
   padding-left: 0.5rem;
+  font-size: 1.5rem;
 }
 
 .faq .row .accordion-container .accordion .accordion-body {
@@ -557,7 +557,7 @@ textarea {
   padding: 0 1rem;
 }
 
-/* media queries */
+/* media queries  */
 
 @media (max-width: 768px) {
   html {
@@ -571,7 +571,7 @@ textarea {
   .header .navbar {
     position: fixed;
     top: -120%;
-    right: 0;
+    left: 0;
     height: auto;
     width: 100%;
     background-color: #fff;
@@ -618,6 +618,7 @@ textarea {
   .about .row .image img {
     width: 100vw;
   }
+
   .service .row {
     flex-flow: column-reverse;
   }
@@ -633,6 +634,7 @@ textarea {
   .service .row .content {
     padding: 0;
   }
+
   .contact .row {
     flex-flow: column;
   }
@@ -645,15 +647,17 @@ textarea {
     width: 100%;
     padding: 0 1.5rem;
   }
+
   .faq {
     padding: 0;
   }
+
   .faq .row {
     padding: 0 1rem;
     flex-flow: column;
   }
 
-  .faq .row image img {
+  .faq .row .image img {
     width: 100vw;
   }
 
@@ -666,11 +670,9 @@ textarea {
   .footer {
     flex-flow: column;
   }
-
   .footer h1 {
     text-align: center;
   }
-
   .footer .icons {
     padding: 2rem 0;
   }
